@@ -36,7 +36,7 @@ const Connection = () => {
   }
 
   return (
-    <div className="text-center my-10">
+    <div className="text-center my-10 mb-28">
       {connections.map((data) => (
         <div key={data._id} className="m-4">
            <ConnectionCard user={data} />
