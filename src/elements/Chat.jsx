@@ -71,7 +71,7 @@ const Chat = () => {
    
 
     return (
-        <div className="w-3/4 mx-auto border border-gray-600 m-5 h-[70vh] flex flex-col">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 mx-auto border border-gray-600 m-5 h-[70vh] flex flex-col">
           <h1 className="p-5 border-b border-gray-600">Chat</h1>
           <div className="flex-1 overflow-scroll sticky bottom-0 p-5">
             {messages.map((msg, index) => {

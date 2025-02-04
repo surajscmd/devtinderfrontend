@@ -42,7 +42,9 @@ const Login = () => {
   }
 
   return (
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 sm:px-10 lg:w-2/5 ">
+
+      <>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-8/12 p-10 ">
   <div className="card bg-base-300 shadow-xl p-6 sm:p-10 flex flex-col sm:flex-row items-center sm:items-stretch">
     {/* Image container */}
     <figure className="w-full sm:w-60  flex justify-center mb-4 sm:mb-0 sm:block">
@@ -53,7 +55,7 @@ const Login = () => {
       />
     </figure>
     {/* Form container */}
-    <div className="card-body flex flex-col items-center sm:items-start">
+    <div className="card-body flex flex-col items-center sm:items-start p-10 ">
       <h2 className="card-title text-center sm:text-left text-lg sm:text-2xl">{!islogin?"Welcome Back!":"Is SignIn"}</h2>
       <div className="py-4 w-full">
         {islogin && ( <><label className="form-control w-full py-2">
@@ -104,7 +106,7 @@ const Login = () => {
         </label>
       </div>
       <p className="text-red-500 justify-center w-full">{error}</p>
-      <p className="text-center  cursor-pointer m-0" onClick={()=>setislogin(!islogin)} >{islogin? "New user? Signup here" : "Existing User? Login Here"}</p>
+      <p className="text-center  cursor-pointer m-0" onClick={()=>setislogin(!islogin)} >{!islogin? "New user? Signup here" : "Existing User? Login Here"}</p>
       <div className="card-actions justify-center w-full mt-4">
        
         <button className="btn btn-primary w-full sm:w-auto" onClick={!islogin? handleLogin : handleSignin}>
@@ -114,6 +116,24 @@ const Login = () => {
     </div>
   </div>
 </div>
+      
+      </>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
   );
 };
 

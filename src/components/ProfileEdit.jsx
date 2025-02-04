@@ -61,7 +61,7 @@ const ProfileEdit = ({ user }) => {
            <CardComponent user={updatedUser} />
       </div>
        
-      <div className="flex card bg-base-300 shadow-xl p-9 my-3 ml-80">
+      <div className="flex card bg-base-300 shadow-xl p-9 my-20 ml-80">
         <p class="text-center text-primary">Update Your profile</p>
         <div className="flex flex-col gap-5  mx-auto my-5 w">
           <div className="flex gap-2"> 

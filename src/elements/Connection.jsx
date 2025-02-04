@@ -38,7 +38,7 @@ const Connection = () => {
   return (
     <div className="text-center my-10 mb-28">
       {connections.map((data) => (
-        <div key={data._id} className="m-4">
+        <div key={data._id} className="mx-1 my-20">
            <ConnectionCard user={data} />
         </div>
       ))}

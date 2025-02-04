@@ -25,7 +25,7 @@ useEffect(()=>{
 },[]);
   if(!feed) return;  
   return (
-    feed && <div className='flex justify-center items-center'>
+    feed && <div className='flex justify-center items-center my-20'>
       {feed.length == 0 ? " no user to show " :<CardComponent user={feed[0]}/> }
     </div>
   )

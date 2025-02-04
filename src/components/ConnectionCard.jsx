@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ConnectionCard = ({user}) => {
   return (
-    <div className="text-center mx-auto my-10 w-[900px]">
+    <div className="text-center mx-auto my-1 w-[900px]">
     <p className="font-bold text-2xl text-primary ">
       <div className="card card-side bg-base-300 shadow-xl px-10 py-1">
         <figure>
