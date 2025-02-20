@@ -6,6 +6,7 @@ import Feed from './elements/Feed'
 import Connection from './elements/Connection'
 import ConnectRequest from './elements/ConnectRequest'
 import Chat from './elements/Chat'
+import Membership from './elements/Membership'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
          <Route path="/connection" element={<Connection/>} />
          <Route path="/connectionrequest" element={<ConnectRequest/>} />
          <Route path="/chat/:targetUserId" element={<Chat/>} />
+         <Route path="/membership" element={<Membership/>} />
       </Route>
     </Routes>
 
