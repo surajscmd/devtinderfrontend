@@ -1,9 +1,23 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Base_Url } from '../utils/constant'
 
 const Membership = () => {
- 
+  const [isUserPremium, setIsUserPremium] = useState(false);
+  useEffect(() => {
+    verifyPremiumUser();
+  }, [isUserPremium]);
+
+  const verifyPremiumUser = async () => {
+    const res = await axios.get(Base_Url + "/premium/verify", {
+      withCredentials: true,
+    });
+
+    if (res.data.isPremium) {
+      setIsUserPremium(true);
+    }
+  };
+
     const handleBuyClick = async (type) => {
        const order = await axios.post(Base_Url + "/payment/create",
       {
@@ -27,13 +41,19 @@ const Membership = () => {
         theme: {
           color: type == "gold" ? "#FFD700" : "#edede9"
         },
+        handler: verifyPremiumUser,
       };
 
       const rzp = new Razorpay(options);
       rzp.open();
-       
       }
+
     return (
+      isUserPremium === true ? (
+        <div className="text-center my-28">
+          <h1 className="text-3xl font-bold">You are already a premium user</h1>
+        </div>
+      ) : (
     <div className="text-center my-28 ">  
        <div className="m-10">
       <div className="flex w-full">
@@ -71,7 +91,7 @@ const Membership = () => {
       </div>
     </div>
      </div>
- 
+      )
   )
 }
 
