@@ -6,7 +6,7 @@ const ProfileCard = ({ user }) => {
       <div className="card bg-base-300 w-96 shadow-xl p-9">
         <figure>
           <img
-            className="w-40 h-40 rounded-full object-fill shadow-lg border-4 border-primary"
+            className="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-primary"
             src={user?.photoUrl}
             alt="Shoes"
           />
