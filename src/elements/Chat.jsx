@@ -72,7 +72,7 @@ const Chat = () => {
 
     return (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 mx-auto border border-gray-600 m-5 h-[70vh] flex flex-col">
-          <h1 className="p-5 border-b border-gray-600">Chat</h1>
+          <h1 className="p-5 border-b border-gray-600 bg-black z-40">Chat</h1>
           <div className="flex-1 overflow-scroll sticky bottom-0 p-5">
             {messages.map((msg, index) => {
               return (
@@ -90,7 +90,7 @@ const Chat = () => {
               );
             })}
           </div>
-          <div className="p-5 border-t border-gray-600 flex items-center gap-2">
+          <div className="p-5 border-t border-gray-600 bg-black  flex items-center gap-2">
             <input
                value={newMessage}
                onChange={(e)=> setNewMessage(e.target.value)}

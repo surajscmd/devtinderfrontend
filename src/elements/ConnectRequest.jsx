@@ -49,6 +49,7 @@ const ConnectRequest = () => {
     {request.map((data) => {
       console.log(data)
       const user = data.fromUserId;
+     
       return (
         <div className="text-center mx-auto my-10 w-2/5" key={user._id} >
         <p className="font-bold text-2xl text-primary ">
@@ -61,7 +62,7 @@ const ConnectRequest = () => {
             </figure>
             <div className="card-body flex flex-col w-6/12 items-center pb-10">
               <h2 className="card-title">{user?.firstName + " " + user?.lastName}</h2>
-              <p className="mb-1 text-sm font-light text-gray-900 dark:text-white">{ user?.age + " , " + user?.gender}</p>
+              <p className="mb-1 text-sm font-light text-gray-900 dark:text-white">{user?.gender}</p>
               <h5 className="mb-1 text-sm font-light text-gray-900 dark:text-white">{user?.about}</h5>
               <span className="text-sm text-gray-500 dark:text-gray-400">{user?.skills}</span>
               
