@@ -15,7 +15,7 @@ const ProfileCard = ({ user }) => {
           <h2 className="font-bold text-2xl text-primary">
             {user?.firstName + " " + user?.lastName}
           </h2>
-          {user?.age && user?.gender && <p>{user.age + " , " + user.gender}</p>}
+          { <p>{user.age + " , " + user.gender}</p>}
           {user?.about && <p>{user.about}</p>}
           {user?.skills && <p>{user.skills}</p>}
         </div>
