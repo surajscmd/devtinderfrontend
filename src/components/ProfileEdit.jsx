@@ -4,6 +4,7 @@ import axios from "axios";
 import { Base_Url } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import ProfileCard from "./ProfileCard";
 
 const ProfileEdit = ({ user }) => {
   // Destructure user object
@@ -58,7 +59,7 @@ const ProfileEdit = ({ user }) => {
   return (
     <div>
       <div className="fixed left-0 top-20">
-           <CardComponent user={updatedUser} />
+           <ProfileCard user={updatedUser} />
       </div>
        
       <div className="flex card bg-base-300 shadow-xl p-9 my-20 ml-80">

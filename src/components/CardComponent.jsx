@@ -3,6 +3,7 @@ import React from "react";
 import { Base_Url } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { removeUserfeed } from "../utils/feedSlice";
+import { BookmarkX, MessageCircleHeart } from "lucide-react";
 
 const CardComponent = ({ user }) => {
   console.log(user?._id);
@@ -25,12 +26,13 @@ const CardComponent = ({ user }) => {
           <h2 className="font-bold text-2xl text-primary">
             {user?.firstName + " " + user?.lastName}
           </h2>
-          <p>{user?.age + " , " + user?.gender}</p>
-          <p>{user?.about}</p>
-          <p>{user?.skills}</p>
+          {user?.age && user?.gender && <p>{user.age + " , " + user.gender}</p>}
+          {user?.about && <p>{user.about}</p>}
+          {user?.skills && <p>{user.skills}</p>}
           <div className="card-actions justify-center my-4">
-            <button className="btn btn-primary btn-wide" onClick={()=>handleSendRequest("ignored", user?._id)}>Ignore</button>
-            <button className="btn btn-secondary btn-wide" onClick={()=>handleSendRequest("interested", user?._id)}>Interested</button>
+          
+            <button className="btn btn-info " onClick={()=>handleSendRequest("interested", user?._id)}><MessageCircleHeart size={32} strokeWidth={2.25}/></button>
+            <button className="btn  btn-error " onClick={()=>handleSendRequest("ignored", user?._id)}><BookmarkX size={32} strokeWidth={2.25}/></button>
           </div>
         </div>
       </div>

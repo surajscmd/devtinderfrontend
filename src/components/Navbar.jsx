@@ -27,7 +27,12 @@ const Navbar = () => {
   {user && (<div className="flex-none gap-2"> 
     <div className="dropdown dropdown-end">
       <div className='flex items-center justify-center'>
-        <p>Welcome , {user?.firstName}</p>
+      <p>
+  {user?.firstName && user?.lastName &&
+    `${user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)} 
+     ${user.lastName.charAt(0).toUpperCase() + user.lastName.slice(1)}`
+  }
+</p>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mx-5">
         <div className="w-7 rounded-full">
           <img
